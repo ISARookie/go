@@ -1,5 +1,9 @@
 package main
 
+import (
+	"fmt"
+)
+
 const c = "C"
 
 var v int = 5
@@ -14,9 +18,18 @@ func backend() {
 
 }
 
-func main() {
+func f() {
+	for i := 0; i < 4; i++ {
+		g := func(i int) { fmt.Printf("%d ", i) }
+		g(i)
+		fmt.Printf(" type %T and has value %v \n", g, g)
+	}
+}
 
-	//var goos string = os.Getenv("GOOS")
+func main() {
+	// 闭包
+	//f()
+	//var goos = os.Getenv("GOOS")
 	//fmt.Printf("The operating system is: %s\n", goos)
 	//path := os.Getenv("PATH")
 	//fmt.Printf("Path is %s\n", path)
