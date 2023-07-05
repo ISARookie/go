@@ -1,6 +1,7 @@
 package main
 
 import (
+	structPack "example.com/m/v2/struct/pack"
 	"fmt"
 )
 
@@ -27,6 +28,13 @@ func f() {
 }
 
 func main() {
+	struct1 := new(structPack.ExpStruct)
+	struct1.Mil = 10
+	struct1.Mfl = 10.
+
+	fmt.Printf("Mil = %d\n", struct1.Mil)
+	fmt.Printf("Mfl = %f\n", struct1.Mfl)
+
 	// 闭包
 	//f()
 	//var goos = os.Getenv("GOOS")
