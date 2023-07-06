@@ -14,6 +14,10 @@ func (l *Log) String() string {
 	return l.msg
 }
 
+func (c *Customer) String() string {
+	return c.Name + "\nLog:" + fmt.Sprintln(c.Log)
+}
+
 //func (c *Customer) Log() *Log {
 //	return c.log
 //}
@@ -39,4 +43,5 @@ func main() {
 
 	c.Add("2 - After me the world will be a better place!")
 	fmt.Println(c)
+	fmt.Println(&(c.Log))
 }
